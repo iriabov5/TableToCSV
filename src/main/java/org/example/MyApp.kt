@@ -24,7 +24,7 @@ object App {
             c.autoCommit = false
             stmt = c.createStatement()
             val csv = "/Users/ivan/Desktop/data.csv"
-            val writer = CSVWriter(FileWriter(csv, false))
+            val writer = CSVWriter(FileWriter(csv, false), '|')
             val rs = stmt.executeQuery(sql)
             while (rs.next()) {
                 val columnCount = rs.metaData.columnCount
